@@ -1,5 +1,6 @@
 {
   "name": "@hexlet/code",
+  "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Max-climber/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Max-climber/frontend-project-44/actions)",
   "homepage": "https://github.com/Max-climber/frontend-project-44#readme",
@@ -14,6 +15,9 @@
   "author": "",
   "type": "commonjs",
   "main": "index.js",
+  "bin": {
+    "code": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
