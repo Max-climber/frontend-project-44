@@ -1,0 +1,8 @@
+{"version": 2, "width": 130, "height": 19, "timestamp": 1737453662, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.011231, "o", "\u001b[?2004hmax1205@max:/mnt/c/Users/maxiz/Downloads/hexlet_courses/frontend-project-44$ "]
+[3.358208, "o", "s"]
+[3.431319, "o", "l"]
+[4.199267, "o", "\r\n\u001b[?2004l\r"]
+[4.361315, "o", "Command 'sl' not found, but can be installed with:\r\nsudo apt install sl\r\n"]
+[4.369622, "o", "\u001b[?2004hmax1205@max:/mnt/c/Users/maxiz/Downloads/hexlet_courses/frontend-project-44$ "]
+[9.519788, "o", "\u001b[?2004l\r\r\nexit\r\n"]
