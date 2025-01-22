@@ -12,6 +12,7 @@ function getRandomInt(min, max) {
 
 function main() {
   const userName = sayHelloToUser();
+  console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const isEven = (randomNumber) => randomNumber % 2 === 0;
   for (let i = 0; i < 3; i += 1) {
