@@ -14,12 +14,15 @@ function main() {
   const userName = sayHelloToUser();
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
   const isEven = (randomNumber) => randomNumber % 2 === 0;
+
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = getRandomInt(0, 100);
     console.log(`Question: ${randomNumber}`);
     const userAnswer = readlineSync.question("Your answer: ");
     const expectedAnswer = isEven(randomNumber) ? "yes" : "no";
+
     if (expectedAnswer === userAnswer) {
       console.log("Correct!");
     } else {
