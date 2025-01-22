@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 }
 
 function main() {
-  console.log(sayHelloToUser());
+  const userName = sayHelloToUser();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const isEven = (randomNumber) => randomNumber % 2 === 0;
   for (let i = 0; i < 3; i += 1) {
@@ -23,12 +23,12 @@ function main() {
       console.log("Correct!");
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, Bill!`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`
       );
       return;
     }
   }
-  console.log("Congratulations, Bill!");
+  console.log(`Congratulations, ${userName}!`);
 }
 
 main();
