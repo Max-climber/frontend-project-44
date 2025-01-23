@@ -33,3 +33,5 @@ const main = () => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
+
+export default main;

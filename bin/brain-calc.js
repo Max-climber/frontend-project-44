@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-node ./games/brain-calc
+
+import main from "../games/brain-calc";
+
+main();
