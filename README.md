@@ -9,3 +9,7 @@
 ### Asciinema brain-even:
 
 [even-games](https://asciinema.org/a/aivzcsGUra5qde0JimPMeq5we)
+
+### Asciinema brain-calc:
+
+[calc-games](https://asciinema.org/a/vtRwS0hB2M0tj9UPqTb1F9Cne)
