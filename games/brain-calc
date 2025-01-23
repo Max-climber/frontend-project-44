@@ -1,0 +1,47 @@
+import sayHelloToUser from "../src/cli.js";
+import readlineSync from "readline-sync";
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+function getRandomOperation('+', '-' , '*'){
+    const randomOperation = getRandomInt(0, 2);
+    if (randomOperation === 0){
+        return '+';
+    }
+
+};
+
+
+console.log("Welcome to the Brain Games!");
+
+const main = () => {
+  const userName = sayHelloToUser();
+  console.log(`Hello, ${userName}!`);
+  console.log("What is the result of the expression?");
+
+  const isEven = (randomNumber) => randomNumber % 2 === 0;
+
+  for (let i = 0; i < 3; i += 1) {
+    const randomNumber = getRandomInt(0, 100);
+    const randomOperation = getRandomOperation(plus, minus, multiply);
+    console.log(`Question: ${randomNumber} ${randomOperation} ${randomNumber}`);
+    const userAnswer = readlineSync.question("Your answer: ");
+    const expectedAnswer = isEven(randomNumber) ? "yes" : "no";
+
+    if (expectedAnswer === userAnswer) {
+      console.log("Correct!");
+    } else {
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`
+      );
+      return;
+    }
+  }
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export default main;

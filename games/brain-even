@@ -1,5 +1,3 @@
-console.log("Welcome to the Brain Games!");
-
 import sayHelloToUser from "../src/cli.js";
 import readlineSync from "readline-sync";
 
@@ -8,6 +6,8 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+console.log("Welcome to the Brain Games!");
 
 const main = () => {
   const userName = sayHelloToUser();
