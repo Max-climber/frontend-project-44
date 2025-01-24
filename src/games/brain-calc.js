@@ -1,23 +1,6 @@
-import sayHelloToUser from "../src/cli.js";
+import sayHelloToUser from "../../src/cli.js";
 import readlineSync from "readline-sync";
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function getRandomOperation() {
-  const randomOperation = getRandomInt(0, 2);
-
-  if (randomOperation === 0) {
-    return "+";
-  } else if (randomOperation === 1) {
-    return "-";
-  } else {
-    return "*";
-  }
-}
+import { getRandomInt, getRandomOperation } from "../../src/index.js";
 
 const main = () => {
   const userName = sayHelloToUser();
