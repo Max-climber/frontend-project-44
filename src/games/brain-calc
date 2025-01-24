@@ -19,11 +19,9 @@ function getRandomOperation() {
   }
 }
 
-console.log("Welcome to the Brain Games!");
-
 const main = () => {
   const userName = sayHelloToUser();
-  console.log(`Hello, ${userName}!`);
+
   console.log("What is the result of the expression?");
 
   for (let i = 0; i < 3; i += 1) {
