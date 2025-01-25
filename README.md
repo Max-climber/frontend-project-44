@@ -17,3 +17,7 @@
 ### Asciinema brain-gcd:
 
 [gcd-games](https://asciinema.org/a/UdVJtyxzvHUuKZsZPcL5ureVM)
+
+### Asciinema brain-progression:
+
+[progression-games](https://asciinema.org/a/aHytDboj15reDpPTt904uKznB)
