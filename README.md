@@ -21,3 +21,7 @@
 ### Asciinema brain-progression:
 
 [progression-games](https://asciinema.org/a/aHytDboj15reDpPTt904uKznB)
+
+### Asciinema brain-prime:
+
+[prime-games](https://asciinema.org/a/fI1S4F7FXZif2y8cPvICcZCpl)

@@ -43,6 +43,18 @@ function getProgression() {
   return [formattedProgression, missingNum];
 }
 
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+
+  for (let i = 2; i < num - 1; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
 const engine = (description, getData) => {
   const userName = sayHelloToUser();
   console.log(description);
@@ -65,4 +77,4 @@ const engine = (description, getData) => {
 };
 
 export default engine;
-export { getRandomInt, getRandomOperation, getGCD, getProgression };
+export { getRandomInt, getRandomOperation, getGCD, getProgression, isPrime };
