@@ -27,6 +27,22 @@ function getGCD(randomNumber1, randomNumber2) {
   }
 }
 
+function getProgression() {
+  let start = getRandomInt(1, 50);
+  let step = getRandomInt(1, 5);
+
+  const progression = Array.from({ length: 10 }, (_, i) => start + step * i);
+
+  const missingIndex = getRandomInt(0, 9);
+  const missingNum = progression[missingIndex];
+
+  progression[missingIndex] = "..";
+
+  const formattedProgression = progression.join(" ");
+
+  return [formattedProgression, missingNum];
+}
+
 const engine = (description, getData) => {
   const userName = sayHelloToUser();
   console.log(description);
@@ -49,4 +65,4 @@ const engine = (description, getData) => {
 };
 
 export default engine;
-export { getRandomInt, getRandomOperation, getGCD };
+export { getRandomInt, getRandomOperation, getGCD, getProgression };
