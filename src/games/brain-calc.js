@@ -1,5 +1,5 @@
-import { getRandomInt, getRandomOperation } from "../../src/index.js";
 import engine from "../../src/index.js";
+import { getRandomInt, getRandomOperation } from "../../src/index.js";
 
 function getData() {
   const randomNumber1 = getRandomInt(0, 100);

@@ -1,14 +1,14 @@
 import engine from "../../src/index.js";
-import { getRandomInt } from "../../src/index.js";
+import { getRandomInt, getGCD } from "../../src/index.js";
 
 function getData() {
   const randomNumber1 = getRandomInt(0, 100);
-  const randomNumber2 = getRandomInt(0, 101);
+  const randomNumber2 = getRandomInt(1, 101);
 
-  const mathExpression = `${randomNumber1} ${randomNumber2}`;
+  const expectedAnswer = getGCD(randomNumber1, randomNumber2).toString();
+  const question = `${randomNumber1} ${randomNumber2}`;
 
-  const expectedAnswer = eval(mathExpression).toString();
-  return [mathExpression, expectedAnswer];
+  return [question, expectedAnswer];
 }
 
 const description = `Find the greatest common divisor of given numbers.`;

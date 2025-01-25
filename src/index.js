@@ -19,6 +19,14 @@ function getRandomOperation() {
   }
 }
 
+function getGCD(randomNumber1, randomNumber2) {
+  if (randomNumber2 === 0) {
+    return randomNumber1;
+  } else {
+    return getGCD(randomNumber2, randomNumber1 % randomNumber2);
+  }
+}
+
 const engine = (description, getData) => {
   const userName = sayHelloToUser();
   console.log(description);
@@ -41,4 +49,4 @@ const engine = (description, getData) => {
 };
 
 export default engine;
-export { getRandomInt, getRandomOperation };
+export { getRandomInt, getRandomOperation, getGCD };
