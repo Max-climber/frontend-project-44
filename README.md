@@ -13,3 +13,7 @@
 ### Asciinema brain-calc:
 
 [calc-games](https://asciinema.org/a/vtRwS0hB2M0tj9UPqTb1F9Cne)
+
+### Asciinema brain-gcd:
+
+[gcd-games](https://asciinema.org/a/UdVJtyxzvHUuKZsZPcL5ureVM)
