@@ -1,5 +1,4 @@
-import engine from "../../src/index.js";
-import { getProgression } from "../../src/index.js";
+import engine, { getProgression } from '../index.js';
 
 function getData() {
   const [question, expectedAnswer] = getProgression();
@@ -7,6 +6,6 @@ function getData() {
   return [question, expectedAnswerToSring];
 }
 
-const description = `What number is missing in the progression?`;
+const description = 'What number is missing in the progression?';
 
 export default () => engine(description, getData);

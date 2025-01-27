@@ -1,5 +1,5 @@
-import sayHelloToUser from "../src/cli.js";
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
+import sayHelloToUser from './cli.js';
 
 function getRandomInt(min, max) {
   max = Math.floor(max);
@@ -10,34 +10,32 @@ function getRandomOperation() {
   const randomOperation = getRandomInt(0, 2);
 
   if (randomOperation === 0) {
-    return "+";
-  } else if (randomOperation === 1) {
-    return "-";
-  } else {
-    return "*";
+    return '+';
+  } if (randomOperation === 1) {
+    return '-';
   }
+  return '*';
 }
 
 function getGCD(randomNumber1, randomNumber2) {
   if (randomNumber2 === 0) {
     return randomNumber1;
-  } else {
-    return getGCD(randomNumber2, randomNumber1 % randomNumber2);
   }
+  return getGCD(randomNumber2, randomNumber1 % randomNumber2);
 }
 
 function getProgression() {
-  let start = getRandomInt(1, 50);
-  let step = getRandomInt(1, 5);
+  const start = getRandomInt(1, 50);
+  const step = getRandomInt(1, 5);
 
   const progression = Array.from({ length: 10 }, (_, i) => start + step * i);
 
   const missingIndex = getRandomInt(0, 9);
   const missingNum = progression[missingIndex];
 
-  progression[missingIndex] = "..";
+  progression[missingIndex] = '..';
 
-  const formattedProgression = progression.join(" ");
+  const formattedProgression = progression.join(' ');
 
   return [formattedProgression, missingNum];
 }
@@ -61,13 +59,13 @@ const engine = (description, getData) => {
   for (let i = 0; i < 3; i += 1) {
     const [question, expectedAnswer] = getData();
     console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (expectedAnswer === userAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`,
       );
       return;
     }
@@ -76,4 +74,6 @@ const engine = (description, getData) => {
 };
 
 export default engine;
-export { getRandomInt, getRandomOperation, getGCD, getProgression, isPrime };
+export {
+  getRandomInt, getRandomOperation, getGCD, getProgression, isPrime,
+};

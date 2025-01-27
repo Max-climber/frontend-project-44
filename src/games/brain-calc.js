@@ -1,5 +1,4 @@
-import engine from "../../src/index.js";
-import { getRandomInt, getRandomOperation } from "../../src/index.js";
+import engine, { getRandomInt, getRandomOperation } from '../index.js';
 
 function getData() {
   const randomNumber1 = getRandomInt(0, 100);
@@ -12,6 +11,6 @@ function getData() {
   return [mathExpression, expectedAnswer];
 }
 
-const description = `What is the result of the expression?`;
+const description = 'What is the result of the expression?';
 
 export default () => engine(description, getData);
