@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import engine, { getRandomInt, getRandomOperation } from '../index.js';
 
 function getData() {

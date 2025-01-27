@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import sayHelloToUser from './cli.js';
 
 function getRandomInt(min, max) {
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  const convertedMax = Math.floor(max);
+  return Math.floor(Math.random() * (convertedMax - min + 1)) + min;
 }
 
 function getRandomOperation() {
@@ -11,7 +11,8 @@ function getRandomOperation() {
 
   if (randomOperation === 0) {
     return '+';
-  } if (randomOperation === 1) {
+  }
+  if (randomOperation === 1) {
     return '-';
   }
   return '*';
