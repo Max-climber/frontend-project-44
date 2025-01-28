@@ -1,3 +1,11 @@
+# Brain-games
+
+## Setup
+
+```bash
+make install
+```
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/Max-climber/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Max-climber/frontend-project-44/actions)
@@ -25,3 +33,5 @@
 ### Asciinema brain-prime:
 
 [prime-games](https://asciinema.org/a/fI1S4F7FXZif2y8cPvICcZCpl)
+
+This repository is created as an educational project at "Hexlet". It includes different games for a child's brain development :)
