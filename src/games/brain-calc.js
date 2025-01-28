@@ -1,5 +1,22 @@
 /* eslint no-eval: 0 */
-import engine, { getRandomInt, getRandomOperation } from '../index.js';
+import engine from '../index.js';
+
+function getRandomInt(min, max) {
+  const convertedMax = Math.floor(max);
+  return Math.floor(Math.random() * (convertedMax - min + 1)) + min;
+}
+
+function getRandomOperation() {
+  const randomOperation = getRandomInt(0, 2);
+
+  if (randomOperation === 0) {
+    return '+';
+  }
+  if (randomOperation === 1) {
+    return '-';
+  }
+  return '*';
+}
 
 function getData() {
   const randomNumber1 = getRandomInt(0, 100);

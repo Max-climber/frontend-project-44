@@ -1,4 +1,9 @@
-import engine, { getRandomInt } from '../index.js';
+import engine from '../index.js';
+
+function getRandomInt(min, max) {
+  const convertedMax = Math.floor(max);
+  return Math.floor(Math.random() * (convertedMax - min + 1)) + min;
+}
 
 function getData() {
   const isEven = (randomNumber) => randomNumber % 2 === 0;
