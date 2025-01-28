@@ -1,4 +1,3 @@
-/* eslint no-eval: 0 */
 import engine from "../index.js";
 import getRandomInt from "../randomInt.js";
 
@@ -14,6 +13,17 @@ function getRandomOperation() {
   return "*";
 }
 
+function calculateExpression(num1, num2, operation) {
+  switch (operation) {
+    case "+":
+      return (num1 + num2).toString();
+    case "-":
+      return (num1 - num2).toString();
+    case "*":
+      return (num1 * num2).toString();
+  }
+}
+
 function getData() {
   const randomNumber1 = getRandomInt(0, 100);
   const randomNumber2 = getRandomInt(0, 101);
@@ -21,7 +31,11 @@ function getData() {
 
   const mathExpression = `${randomNumber1} ${randomOperation} ${randomNumber2}`;
 
-  const expectedAnswer = eval(mathExpression).toString();
+  const expectedAnswer = calculateExpression(
+    randomNumber1,
+    randomNumber2,
+    randomOperation
+  );
   return [mathExpression, expectedAnswer];
 }
 
