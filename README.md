@@ -34,4 +34,5 @@ make install
 
 [prime-games](https://asciinema.org/a/fI1S4F7FXZif2y8cPvICcZCpl)
 
-This repository is created as an educational project at "Hexlet". It includes different games for a child's brain development :)
+[brain-games picture](https://cdn.culture.ru/images/93da67fb-6961-52c6-9286-3d1b9be4016b)
+This repository is created as an educational project at "Hexlet". It includes different games for a child's brain development : )
