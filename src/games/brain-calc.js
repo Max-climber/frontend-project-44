@@ -1,21 +1,17 @@
 /* eslint no-eval: 0 */
-import engine from '../index.js';
-
-function getRandomInt(min, max) {
-  const convertedMax = Math.floor(max);
-  return Math.floor(Math.random() * (convertedMax - min + 1)) + min;
-}
+import engine from "../index.js";
+import getRandomInt from "../randomInt.js";
 
 function getRandomOperation() {
   const randomOperation = getRandomInt(0, 2);
 
   if (randomOperation === 0) {
-    return '+';
+    return "+";
   }
   if (randomOperation === 1) {
-    return '-';
+    return "-";
   }
-  return '*';
+  return "*";
 }
 
 function getData() {
@@ -29,6 +25,6 @@ function getData() {
   return [mathExpression, expectedAnswer];
 }
 
-const description = 'What is the result of the expression?';
+const description = "What is the result of the expression?";
 
 export default () => engine(description, getData);

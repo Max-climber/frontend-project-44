@@ -1,5 +1,5 @@
 import engine from "../index.js";
-import getrandomInt from "../randomInt.js";
+import getRandomInt from "../randomInt.js";
 
 function getProgression() {
   const start = getRandomInt(1, 50);
