@@ -1,5 +1,5 @@
-import engine from "../index.js";
-import getRandomInt from "../randomInt.js";
+import engine from '../index.js';
+import getRandomInt from '../randomInt.js';
 
 function getProgression() {
   const start = getRandomInt(1, 50);
@@ -10,9 +10,9 @@ function getProgression() {
   const missingIndex = getRandomInt(0, 9);
   const missingNum = progression[missingIndex];
 
-  progression[missingIndex] = "..";
+  progression[missingIndex] = '..';
 
-  const formattedProgression = progression.join(" ");
+  const formattedProgression = progression.join(' ');
 
   return [formattedProgression, missingNum];
 }
@@ -23,6 +23,6 @@ function getData() {
   return [question, expectedAnswerToSring];
 }
 
-const description = "What number is missing in the progression?";
+const description = 'What number is missing in the progression?';
 
 export default () => engine(description, getData);

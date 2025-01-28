@@ -1,5 +1,5 @@
-import engine from "../index.js";
-import getRandomInt from "../randomInt.js";
+import engine from '../index.js';
+import getRandomInt from '../randomInt.js';
 
 function isPrime(num) {
   if (num <= 1) {
@@ -17,11 +17,10 @@ function isPrime(num) {
 function getData() {
   const randomNumber = getRandomInt(0, 100);
 
-  const expectedAnswer = isPrime(randomNumber) ? "yes" : "no";
+  const expectedAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, expectedAnswer];
 }
 
-const description =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => engine(description, getData);

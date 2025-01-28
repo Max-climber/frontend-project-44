@@ -1,5 +1,5 @@
-import engine from "../index.js";
-import getRandomInt from "../randomInt.js";
+import engine from '../index.js';
+import getRandomInt from '../randomInt.js';
 
 function getGCD(randomNumber1, randomNumber2) {
   if (randomNumber2 === 0) {
@@ -18,6 +18,6 @@ function getData() {
   return [question, expectedAnswer];
 }
 
-const description = "Find the greatest common divisor of given numbers.";
+const description = 'Find the greatest common divisor of given numbers.';
 
 export default () => engine(description, getData);
