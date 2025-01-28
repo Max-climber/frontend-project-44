@@ -1,26 +1,28 @@
-import engine from "../index.js";
-import getRandomInt from "../randomInt.js";
+import engine from '../index.js';
+import getRandomInt from '../randomInt.js';
 
 function getRandomOperation() {
   const randomOperation = getRandomInt(0, 2);
 
   if (randomOperation === 0) {
-    return "+";
+    return '+';
   }
   if (randomOperation === 1) {
-    return "-";
+    return '-';
   }
-  return "*";
+  return '*';
 }
 
 function calculateExpression(num1, num2, operation) {
   switch (operation) {
-    case "+":
+    case '+':
       return (num1 + num2).toString();
-    case "-":
+    case '-':
       return (num1 - num2).toString();
-    case "*":
+    case '*':
       return (num1 * num2).toString();
+    default:
+      return null;
   }
 }
 
@@ -34,11 +36,11 @@ function getData() {
   const expectedAnswer = calculateExpression(
     randomNumber1,
     randomNumber2,
-    randomOperation
+    randomOperation,
   );
   return [mathExpression, expectedAnswer];
 }
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 
 export default () => engine(description, getData);
