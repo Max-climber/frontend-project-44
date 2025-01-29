@@ -3,14 +3,9 @@ import getRandomInt from '../randomInt.js';
 
 function getRandomOperation() {
   const randomOperation = getRandomInt(0, 2);
+  const operations = ['+', '-', '*'];
 
-  if (randomOperation === 0) {
-    return '+';
-  }
-  if (randomOperation === 1) {
-    return '-';
-  }
-  return '*';
+  return operations[randomOperation];
 }
 
 function calculateExpression(num1, num2, operation) {
@@ -22,7 +17,7 @@ function calculateExpression(num1, num2, operation) {
     case '*':
       return (num1 * num2).toString();
     default:
-      return null;
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
 }
 
