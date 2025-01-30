@@ -2,8 +2,8 @@ import engine from '../index.js';
 import getRandomInt from '../randomInt.js';
 
 function getRandomOperation() {
-  const randomOperation = getRandomInt(0, 2);
   const operations = ['+', '-', '*'];
+  const randomOperation = getRandomInt(0, operations.length - 1);
 
   return operations[randomOperation];
 }
